@@ -2,23 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Sth Lab Page</title>
+<title>Start Lab Page</title>
 <style>
 body {font-family: Arial, sans-serif; margin:20px; background:#f0f0f0;}
-h1 {color:#333;}
-button {padding:10px 20px; font-size:16px;}
-#output {margin-top:10px; font-weight:bold;}
+header {background:#4CAF50;color:white;padding:10px;text-align:center;}
+section {background:white;padding:15px;margin-top:10px;border-radius:5px;}
+button {background:#4CAF50;color:white;border:none;padding:10px 20px;cursor:pointer;}
+button:hover {background:#45a049;}
 </style>
 </head>
 <body>
-<h1>Welcome to the Sth Lab Page</h1>
-<p>This is a sample lab page demonstrating HTML, CSS, and JavaScript in a single file.</p>
-<button id="myBtn">Click me</button>
-<div id="output"></div>
+<header><h1>Start Lab</h1></header>
+<section id="content">
+<p>Welcome to the Start lab page. Click the button to see a greeting.</p>
+<button onclick="showGreeting()">Click Me</button>
+<p id="greeting"></p>
+</section>
 <script>
-document.getElementById('myBtn').addEventListener('click', function(){
-    document.getElementById('output').textContent = 'Button clicked at ' + new Date().toLocaleTimeString();
-});
+function showGreeting() {
+  document.getElementById('greeting').textContent = 'Hello! This is the Start lab page.';
+}
 </script>
 </body>
 </html>
